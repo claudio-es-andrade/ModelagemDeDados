@@ -1,2 +1,2 @@
-# ModelagemDeDados
-Exemplos de Modelagem de Dados
+# Modelagem de Dados
+Repositório da Prática de Exemplos de Contrução da Modelagem de Dados;
