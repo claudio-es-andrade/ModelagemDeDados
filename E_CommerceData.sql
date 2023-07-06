@@ -9,8 +9,8 @@ create table pessoa(
 
 create table pagamento(
 	idPagamento int auto_increment primary key,
-    identificacao enum('Boleto', 'Cartão de Crédito', 'Cartão de Débito', 'Cheque', 'Pix', 'Conta Corrente'),
-    constraint fk_pagamento_cliente foreign key (idPagamento) references cliente(idCliente)
+    identificacao enum('Boleto', 'Cartão de Crédito', 'Cartão de Débito', 'Cheque', 'Pix', 'Conta Corrente')
+    -- constraint fk_pagamento_cliente foreign key (idPagamento) references cliente(idCliente)
 );
 
 create table cliente(
@@ -18,16 +18,16 @@ create table cliente(
     Nome varchar(255),
     Endereco varchar(45),
     IdentificacaoCPF varchar(11) not null unique,
-    IdentificacaoCNPJ varchar(14),
-    constraint fk_pessoa_cliente foreign key (idCliente) references pessoa(idPessoa)
+    IdentificacaoCNPJ varchar(14)
+    -- constraint fk_pessoa_cliente foreign key (idCliente) references pessoa(idPessoa)
 );
 
 create table pedido(
 	idPedido int auto_increment primary key,
     situacao varchar(45),
     descricao varchar(45),
-    frete float,
-    constraint fk_pedido_cliente foreign key (idPedido) references cliente(idCliente)
+    frete float
+    -- constraint fk_pedido_cliente foreign key (idPedido) references cliente(idCliente)
 );
 
 create table produto(
@@ -40,9 +40,9 @@ create table produto(
 create table produtoPedido(
 	idProdutoPedido_produto int,
     idProdutoPedido_pedido int,
-	Quantidade int,
-    constraint fk_ProdutoPedido_Produto foreign key (idProdutoPedido_produto) references produto(idProduto),
-    constraint fk_ProdutoPedido_Pedido foreign key (idProdutoPedido_pedido) references pedido(idPedido)
+	Quantidade int
+    -- constraint fk_ProdutoPedido_Produto foreign key (idProdutoPedido_produto) references produto(idProduto),
+    -- constraint fk_ProdutoPedido_Pedido foreign key (idProdutoPedido_pedido) references pedido(idPedido)
 );
 
 create table fornecedor(
@@ -55,9 +55,9 @@ create table fornecedor(
 create table fornecedorProduto(
 	idFornecedorProduto_fornecedor int,
     idFornecedorProduto_produto int,
-	Quantidade int,
-    constraint fk_FornecedorProduto_Fornecedor foreign key (idFornecedorProduto_fornecedor) references fornecedor(idFornecedor),
-    constraint fk_PornecedorProduto_Produto foreign key (idFornecedorProduto_produto) references produto(idProduto)
+	Quantidade int
+ -- constraint fk_FornecedorProduto_Fornecedor foreign key (idFornecedorProduto_fornecedor) references fornecedor(idFornecedor),
+ -- constraint fk_PornecedorProduto_Produto foreign key (idFornecedorProduto_produto) references produto(idProduto)
 );
 
 create table entrega(
@@ -69,9 +69,9 @@ create table entrega(
 create table fornecedorEntrega(
 	idFornecedorEntrega_entrega int,
     idFornecedorEntrega_fornecedor int,
-	Descricao varchar(100),
-    constraint fk_FornecedorEntrega_Entrega foreign key (idFornecedorEntrega_entrega) references entrega(idEntrega),
-    constraint fk_PornecedorEntrega_Fornecedor foreign key (idFornecedorEntrega_fornecedor) references fornecedor(idFornecedor)
+	Descricao varchar(100)
+    -- constraint fk_FornecedorEntrega_Entrega foreign key (idFornecedorEntrega_entrega) references entrega(idEntrega),
+    -- constraint fk_PornecedorEntrega_Fornecedor foreign key (idFornecedorEntrega_fornecedor) references fornecedor(idFornecedor)
 );
 
 create table vendedorTerceirizado(
@@ -84,9 +84,9 @@ create table vendedorTerceirizado(
 create table vendedorTerceirizadoProduto(
 	idVendedorTerceirizadoProduto_vendedorTerceirizado int,
     idVendedorTerceirizadoProduto_produto int,
-	Quantidade int,
-    constraint fk_VendedorTerceirizadoProduto_vendedorTerceirizado foreign key (idVendedorTerceirizadoProduto_vendedorTerceirizado) references vendedorTerceirizado(idVendedorTerceirizado),
-    constraint fk_PendedorTerceirizadoProduto_Produto foreign key (idVendedorTerceirizadoProduto_produto) references produto(idProduto)
+	Quantidade int
+   -- constraint fk_VendedorTerceirizadoProduto_vendedorTerceirizado foreign key (idVendedorTerceirizadoProduto_vendedorTerceirizado) references vendedorTerceirizado(idVendedorTerceirizado),
+   -- constraint fk_PendedorTerceirizadoProduto_Produto foreign key (idVendedorTerceirizadoProduto_produto) references produto(idProduto)
 );
 
 create table estoque(
@@ -99,9 +99,9 @@ create table estoque(
 create table estoqueProduto(
 	idEstoqueProduto_estoque int,
     idEstoqueProduto_produto int,
-	Quantidade int,
-    constraint fk_EstoqueProduto_Estoque foreign key (idEstoqueProduto_estoque) references estoque(idEstoque),
-    constraint fk_EstoqueProduto_Produto foreign key (idEstoqueProduto_produto) references produto(idProduto)
+	Quantidade int
+    -- constraint fk_EstoqueProduto_Estoque foreign key (idEstoqueProduto_estoque) references estoque(idEstoque),
+    -- constraint fk_EstoqueProduto_Produto foreign key (idEstoqueProduto_produto) references produto(idProduto)
 
 );
 -- Atualizando...
@@ -121,7 +121,7 @@ INSERT INTO pessoa(tFisica , tJuridica)
           (true, true),
           (true, true);
 
-INSERT INTO cliente(Nome, Endereco, IdentificacaoCPF)
+INSERT INTO cliente(Nome, Endereco, IdentificacaoCPF, IdentificacaoCNPJ)
 	VALUES('João', 'Rua 15 CEP23456789', '12345678911', 'Não Existe'),
           ('Maria Joana', 'Rua 17 CEP23456788', '32145678912', 'Não Existe');
 
@@ -132,16 +132,23 @@ UPDATE cliente
 	SET IdentificacaoCNPJ='Não Existe'
     WHERE idCliente=4;
 
+Update pedido
+     Set frete = 90.0
+     where idPedido = 1;
+
 INSERT INTO cliente(Nome, Endereco, IdentificacaoCPF, identificacaoCNPJ, idCliente )
 	VALUES ROW('João', 'Rua 15 CEP23456789', '12345678911', 'NÃO EXISTE', 1),
           ROW('Maria Joana', 'Rua 17 CEP23456788', '32145678912', 'NÃO EXISTE', 2),
           ROW('Alberto Som', 'Rua 14 CEP23456789', '12345678913', '12345678123412', 3),
 		  ROW('Paulo Eletro', 'Rua 16 CEP23456788', '12345678914', '32145678123421', 4);
 
+INSERT INTO cliente(Nome, Endereco, IdentificacaoCPF, identificacaoCNPJ, idCliente )
+	VALUES ROW('Paulo Eletro', 'Rua 16 CEP23456788', '12345678914', '32145678123421', 4);
 
 
-delete from cliente
-	where idCliente=4;
+delete from cliente 
+	where idCliente =4;
+
 select * from pessoa;
 select * from cliente;
 
