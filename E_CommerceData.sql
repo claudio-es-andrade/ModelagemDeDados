@@ -165,7 +165,10 @@ INSERT INTO produto(Categoria, Descricao, Valor)
            ROW('Eletrônicos', 'Celular Android', 1500.50),
            ROW('Utensílios do Lar', 'Jogo de Panelas', 500.50),
 		   ROW('Alimentos', 'Arroz Integral 5Kg', 25.70);
-           
+
+INSERT INTO produto(Categoria, Descricao, Valor)
+	VALUES ROW('Utensílios do Lar', 'Jogo de Talheres', 45.50 );
+
 INSERT INTO pedido(idPedido , situacao , descricao , frete)
 	VALUES ROW(1, 'FECHADO', '3 Jogos de Panelas', 40.00),
            ROW(2, 'ABERTO', '2 Celulares Android', 20.00),
