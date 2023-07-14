@@ -83,3 +83,22 @@ WHERE d.Dnumber=l.DLnumber AND Dlocation='Stanfford';
 DROP INDEX index_max_pob_dept on employee;
 DROP INDEX index_dept_location on dept_location;
 DROP INDEX index_number_employee_dept on employee;
+
+SHOW ENGINES;
+
+use MeuEsquemaEcommerce;
+ALTER TABLE cliente ENGINE MEMORY;
+
+-- Número máximo de clientes
+CREATE INDEX index_max_client on cliente(Nome);
+EXPLAIN SELECT 
+	max(Nome)
+FROM
+	cliente
+INNER JOIN pedido ON idPedido = idCliente;
+
+CREATE INDEX index_pedido on pedido(idPedido);
+EXPLAIN SELECT p.descricao, r.CATEGORIA, r.Valor, p.frete
+FROM pedido p, produto r 
+WHERE p.idPedido = r.idProduto
+ORDER BY Valor;
