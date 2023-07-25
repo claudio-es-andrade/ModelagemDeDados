@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.claudioesandradeecommerce.ecommercemaven.eCommercePagamentoOriginalController">
+    <TableView fx:id="table" layoutX="437.0" layoutY="113.0" prefHeight="335.0" prefWidth="556.0">
+        <columns>
+            <TableColumn fx:id="IdClm" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="IdentificacaoClm" prefWidth="473.0" text="IDENTIFICAÇÃO" />
+        </columns>
+    </TableView>
+    <Label layoutX="356.0" layoutY="27.0" text="PAGAMENTO" textFill="#007fff">
+        <font>
+            <Font name="AharoniCLM Bold Oblique" size="50.0" />
+        </font>
+    </Label>
+    <Label layoutX="48.0" layoutY="122.0" text="ID" textAlignment="JUSTIFY" textFill="WHITE">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Label layoutX="48.0" layoutY="216.0" text="IDENTIFICAÇÃO" textAlignment="JUSTIFY" textFill="WHITE">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtFldId" layoutX="163.0" layoutY="173.0" prefHeight="26.0" prefWidth="260.0" promptText="ID Number" />
+    <TextField fx:id="txtFldIdentificacao" layoutX="160.0" layoutY="279.0" prefHeight="26.0" prefWidth="260.0" promptText="Boleto, Cartão de Crédito, Cartão de Débito, Cheque, Pix, Conta Corrente" />
+    <Button fx:id="btnAdd" layoutX="21.0" layoutY="367.0" mnemonicParsing="false" onAction="#AddPagamento" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="ADD" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnDel" layoutX="160.0" layoutY="367.0" mnemonicParsing="false" onAction="#DelPagamento" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="DEL" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnUpdate" layoutX="293.0" layoutY="367.0" mnemonicParsing="false" onAction="#UpdatePagamento" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="UPD" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnMain" layoutX="437.0" layoutY="489.0" mnemonicParsing="false" onAction="#mainPagamento" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="MAIN" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+</AnchorPane>

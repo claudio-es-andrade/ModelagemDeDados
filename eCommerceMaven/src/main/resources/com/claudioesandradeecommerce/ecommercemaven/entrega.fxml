@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.claudioesandradeecommerce.ecommercemaven.eCommerceEntregaController">
+    <TableView fx:id="table" layoutX="437.0" layoutY="113.0" prefHeight="335.0" prefWidth="556.0">
+        <columns>
+            <TableColumn fx:id="IdClm" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="CodigoRastreioClm" prefWidth="241.0" text="CÓDIGO RASTREIO" />
+            <TableColumn fx:id="SituacaoClm" prefWidth="239.0" text="SITUAÇÃO" />
+        </columns>
+    </TableView>
+    <Label layoutX="423.0" layoutY="14.0" text="ENTREGA" textFill="#007fff">
+        <font>
+            <Font name="AharoniCLM Bold Oblique" size="50.0" />
+        </font>
+    </Label>
+    <Label layoutX="48.0" layoutY="122.0" text="ID" textAlignment="JUSTIFY" textFill="WHITE">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Label layoutX="48.0" layoutY="196.0" text="CÓDIGO RASTREIO" textAlignment="JUSTIFY" textFill="WHITE">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Label layoutX="57.0" layoutY="274.0" text="SITUAÇÃO" textAlignment="JUSTIFY" textFill="WHITE">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtFldId" layoutX="97.0" layoutY="155.0" prefHeight="26.0" prefWidth="260.0" promptText="ID Number" />
+    <TextField fx:id="txtFldCodigoRastreio" layoutX="94.0" layoutY="231.0" prefHeight="26.0" prefWidth="260.0" promptText="CÓDIGO UTILIZADO" />
+    <TextField fx:id="txtFldSituacao" layoutX="94.0" layoutY="309.0" prefHeight="26.0" prefWidth="260.0" promptText="Situação" />
+    <Button fx:id="btnAdd" layoutX="21.0" layoutY="367.0" mnemonicParsing="false" onAction="#AddEntrega" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="ADD" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnDel" layoutX="160.0" layoutY="367.0" mnemonicParsing="false" onAction="#DelEntrega" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="DEL" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnUpdate" layoutX="293.0" layoutY="367.0" mnemonicParsing="false" onAction="#UpdateEntrega" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="UPD" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnMain" layoutX="437.0" layoutY="489.0" mnemonicParsing="false" onAction="#mainEntrega" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="MAIN" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+</AnchorPane>

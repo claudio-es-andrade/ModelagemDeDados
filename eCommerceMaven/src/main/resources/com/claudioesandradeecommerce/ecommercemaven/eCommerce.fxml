@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.claudioesandradeecommerce.ecommercemaven.eCommerceController">
+    <Label layoutX="204.0" layoutY="35.0" text="E-Commerce System " textFill="#007fff">
+        <font>
+            <Font name="AharoniCLM Bold Oblique" size="60.0" />
+        </font>
+    </Label>
+    <VBox layoutX="104.0" layoutY="138.0" prefHeight="300.0" prefWidth="360.0" style="-fx-background-color: black;">
+        <Button fx:id="btnPessoa" mnemonicParsing="false" onAction="#pessoa" prefHeight="43.0" prefWidth="404.0" style="-fx-background-color: BLUE;" text="Pessoa" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnPagamento" mnemonicParsing="false" onAction="#pagamento" prefHeight="43.0" prefWidth="412.0" style="-fx-background-color: BLUE;" text="Pagamento" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnCliente" mnemonicParsing="false" onAction="#cliente" prefHeight="43.0" prefWidth="400.0" style="-fx-background-color: BLUE;" text="Cliente" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnPedido" mnemonicParsing="false" onAction="#pedido" prefHeight="43.0" prefWidth="405.0" style="-fx-background-color: BLUE;" text="Pedido" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnProduto" mnemonicParsing="false" onAction="#produto" prefHeight="43.0" prefWidth="464.0" style="-fx-background-color: BLUE;" text="Produto" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnProdutoPedido" mnemonicParsing="false" onAction="#produtoPedido" prefHeight="43.0" prefWidth="448.0" style="-fx-background-color: BLUE;" text="Produto Pedido" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+      <Button mnemonicParsing="false" onAction="#fornecedor" prefHeight="43.0" prefWidth="541.0" style="-fx-background-color: BLUE;" text="Fornecedor" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+    </VBox>
+    <VBox layoutX="534.0" layoutY="138.0" prefHeight="300.0" prefWidth="360.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="138.0">
+        <Button fx:id="btnFornecedorProduto" mnemonicParsing="false" onAction="#fornecedorProduto" prefHeight="43.0" prefWidth="412.0" style="-fx-background-color: BLUE;" text="Fornecedor Produto" textFill="#eeeaea">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnEntrega" mnemonicParsing="false" onAction="#entrega" prefHeight="43.0" prefWidth="467.0" style="-fx-background-color: BLUE;" text="Entrega" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnFornecedorEntrega" mnemonicParsing="false" onAction="#fornecedorEntrega" prefHeight="43.0" prefWidth="461.0" style="-fx-background-color: BLUE;" text="Fornecedor Entrega" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnVendedorTerceirizado" mnemonicParsing="false" onAction="#vendedorTerceirizado" prefHeight="43.0" prefWidth="485.0" style="-fx-background-color: BLUE;" text="Vendedor Terceirizado" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnVendedorTerceirizadoproduto" mnemonicParsing="false" onAction="#vendedorTerceirizadoProduto" prefHeight="43.0" prefWidth="452.0" style="-fx-background-color: BLUE;" text="Vendedor Terceirizado Produto" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnEstoque" mnemonicParsing="false" onAction="#estoque" prefHeight="43.0" prefWidth="517.0" style="-fx-background-color: BLUE;" text="Estoque" textFill="#ebe7e7">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnEstoqueProduto" mnemonicParsing="false" onAction="#estoqueProduto" prefHeight="43.0" prefWidth="462.0" style="-fx-background-color: BLUE;" text="Estoque Produto" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+    </VBox>
+     <Button fx:id="btnNota" layoutX="230.0" layoutY="483.0" mnemonicParsing="false" onAction="#nota" prefHeight="43.0" prefWidth="541.0" style="-fx-background-color: BLUE;" text="NOTA FISCAL" textFill="WHITE">
+         <font>
+             <Font size="20.0" />
+         </font>
+     </Button>
+</AnchorPane>
