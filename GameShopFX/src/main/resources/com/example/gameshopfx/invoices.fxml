@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gameshopfx.InvoicesController">
+    <TableView fx:id="table" layoutX="425.0" layoutY="113.0" prefHeight="335.0" prefWidth="556.0">
+        <columns>
+            <TableColumn fx:id="IdClm" prefWidth="48.0" text="ID" />
+            <TableColumn fx:id="NameClm" minWidth="0.0" prefWidth="110.0" text="NAME" />
+            <TableColumn fx:id="QuantityClm" minWidth="0.0" prefWidth="88.0" text="QUANTITY" />
+            <TableColumn fx:id="GameClm" minWidth="0.0" prefWidth="90.0" text="GAME" />
+            <TableColumn fx:id="TotalClm" maxWidth="236.0" minWidth="-1.0" prefWidth="92.0" text="TOTAL" />
+         <TableColumn fx:id="CategoryClm" minWidth="0.0" prefWidth="127.0" text="CATEGORY" />
+        </columns>
+    </TableView>
+    <Label layoutX="388.0" layoutY="27.0" text="INVOICES" textFill="#0077ff">
+        <font>
+            <Font name="AharoniCLM Bold Oblique" size="50.0" />
+        </font>
+    </Label>
+    <Button fx:id="btnPrint" layoutX="160.0" layoutY="390.0" mnemonicParsing="false" onAction="#PrintInvoice" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="PRINT" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnMain" layoutX="437.0" layoutY="489.0" mnemonicParsing="false" onAction="#mainInvoices" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="MAIN" textFill="WHITE">
+        <font>
+            <Font size="29.0" />
+        </font>
+    </Button>
+   <VBox layoutX="160.0" layoutY="127.0" prefHeight="236.0" prefWidth="225.0">
+      <children>
+          <TextField fx:id="txtFldId" prefHeight="26.0" prefWidth="260.0" promptText="ID Number">
+            <VBox.margin>
+               <Insets bottom="15.0" top="10.0" />
+            </VBox.margin>
+         </TextField>
+          <TextField fx:id="txtFldName" prefHeight="26.0" prefWidth="260.0" promptText="Full Name">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </TextField>
+          <TextField fx:id="txtFldQuantity" prefHeight="26.0" prefWidth="260.0" promptText="Quantity of Itens">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </TextField>
+          <TextField fx:id="txtFldGame" prefHeight="26.0" prefWidth="260.0" promptText="Name of the game">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </TextField>
+          <TextField fx:id="txtFldTotal" prefHeight="26.0" prefWidth="260.0" promptText="Total Price">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </TextField>
+         <TextField fx:id="txtFldCategory" prefHeight="26.0" prefWidth="260.0" promptText="Game Category">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </TextField>
+      </children>
+   </VBox>
+   <VBox layoutX="14.0" layoutY="139.0" prefHeight="179.0" prefWidth="128.0">
+      <children>
+          <Label text="ID" textAlignment="JUSTIFY" textFill="WHITE">
+              <font>
+                  <Font size="20.0" />
+              </font>
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+          </Label>
+          <Label text="NAME" textAlignment="JUSTIFY" textFill="WHITE">
+              <font>
+                  <Font size="20.0" />
+              </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+          </Label>
+          <Label text="QUANTITY" textAlignment="JUSTIFY" textFill="WHITE">
+              <font>
+                  <Font size="20.0" />
+              </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+          </Label>
+          <Label text="GAME" textAlignment="JUSTIFY" textFill="WHITE">
+              <font>
+                  <Font size="20.0" />
+              </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+          </Label>
+          <Label text="TOTAL" textAlignment="JUSTIFY" textFill="WHITE">
+              <font>
+                  <Font size="20.0" />
+              </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+          </Label>
+         <Label text="CATEGORY" textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+      </children>
+      <padding>
+         <Insets bottom="10.0" />
+      </padding>
+   </VBox>
+</AnchorPane>
