@@ -316,3 +316,16 @@ select * from cliente
 	inner join pessoa
 		on idPessoa = idCliente
     order by identificacaoCNPJ and Nome;
+
+create table nota
+      (
+			Nome varchar(255),
+			IdentificacaoCPF varchar(11) not null unique, 
+            IdentificacaoCNPJ varchar(14),
+            Categoria varchar(20),
+            situacao varchar(45),
+            Valor float,
+            frete float 
+      );
+
+select * from nota;

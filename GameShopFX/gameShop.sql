@@ -81,7 +81,7 @@ CREATE TABLE invoices(
     invoice_category varchar(50)
 );
 DROP TABLE invoices;
-
+SELECT * FROM invoices;
 
  SELECT clients.id_client, clients.name_client, orders.qty, games.name_game, games.price * orders.qty AS TOTAL_PRICE, categories.name_category
 FROM orders

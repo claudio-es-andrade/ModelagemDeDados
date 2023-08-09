@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.claudioESandrade.moviejavafx.MovieController">
+    <TableView fx:id="table" layoutX="425.0" layoutY="113.0" prefHeight="335.0" prefWidth="556.0">
+        <columns>
+            <TableColumn fx:id="idClm" prefWidth="66.0" text="ID" />
+            <TableColumn fx:id="typeClm" minWidth="0.0" prefWidth="71.0" text="TYPE" />
+         <TableColumn fx:id="nameClm" prefWidth="129.0" text="NAME" />
+         <TableColumn fx:id="total_epClm" prefWidth="85.0" text="TOTAL EP" />
+         <TableColumn fx:id="atual_epClm" prefWidth="103.0" text="ATUAL EP" />
+         <TableColumn fx:id="last_viewClm" prefWidth="87.0" text="LAST VIEW" />
+        </columns>
+    </TableView>
+    <Label layoutX="409.0" layoutY="29.0" stylesheets="@application.css" text="MOVIES" textFill="#0077ff">
+        <font>
+            <Font name="AharoniCLM Bold Oblique" size="50.0" />
+        </font>
+    </Label>
+
+    <Button fx:id="btnAdd" layoutX="21.0" layoutY="385.0" mnemonicParsing="false" onAction="#Add" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="ADD" textFill="WHITE">
+        <font>
+            <Font size="25.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnDel" layoutX="160.0" layoutY="379.0" mnemonicParsing="false" onAction="#Del" prefHeight="80.0" prefWidth="100.0" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="DEL" textFill="WHITE">
+        <font>
+            <Font size="25.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnUpdate" layoutX="293.0" layoutY="381.0" mnemonicParsing="false" onAction="#Update" prefHeight="81.0" prefWidth="100.0" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="UPD" textFill="WHITE">
+        <font>
+            <Font size="25.0" />
+        </font>
+    </Button>
+    <Button fx:id="btnMain" layoutX="437.0" layoutY="463.0" mnemonicParsing="false" onAction="#main" prefHeight="120.0" prefWidth="160.0" style="-fx-background-color: BLUE;" stylesheets="@application.css" text="MAIN" textFill="WHITE">      <font>
+        <Font size="30.0" />
+    </font>
+    </Button>
+   <VBox layoutX="156.0" layoutY="113.0" prefHeight="255.0" prefWidth="250.0" AnchorPane.bottomAnchor="232.0">
+      <children>
+      
+      
+          <TextField fx:id="txtFldId" prefHeight="40.0" prefWidth="250.0" promptText="ID">
+            <opaqueInsets>
+               <Insets bottom="15.0" />
+            </opaqueInsets>
+            <padding>
+               <Insets bottom="10.0" />
+            </padding>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </TextField>
+          <TextField fx:id="txtFldType" prefHeight="40.0" prefWidth="250.0" promptText="TYPE">
+            <opaqueInsets>
+               <Insets bottom="15.0" top="15.0" />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </TextField>
+         <TextField fx:id="txtFldName" prefHeight="40.0" prefWidth="250.0" promptText="NAME">
+            <opaqueInsets>
+               <Insets bottom="15.0" top="15.0" />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </TextField>
+         <TextField fx:id="txtFldTotal_ep" prefHeight="40.0" prefWidth="250.0" promptText="TOTAL EP">
+            <opaqueInsets>
+               <Insets bottom="15.0" top="15.0" />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </TextField>
+         <TextField fx:id="txtFldAtual_ep" prefHeight="40.0" prefWidth="250.0" promptText="ATUAL EP">
+            <opaqueInsets>
+               <Insets bottom="15.0" top="15.0" />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </TextField>
+         <TextField fx:id="txtFldLast_view" prefHeight="40.0" prefWidth="250.0" promptText="LAST VIEW" />
+      </children>
+   </VBox>
+   <VBox layoutX="31.0" layoutY="113.0" prefHeight="255.0" prefWidth="100.0">
+      <children>
+          <Label prefHeight="41.0" prefWidth="22.0" text="ID" textAlignment="JUSTIFY" textFill="WHITE">
+              <font>
+                  <Font size="20.0" />
+              </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+          </Label>
+          <Label prefHeight="25.0" prefWidth="46.0" text="TYPE" textAlignment="JUSTIFY" textFill="WHITE">
+              <font>
+                  <Font size="20.0" />
+              </font>
+            <opaqueInsets>
+               <Insets bottom="15.0" top="10.0" />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+          </Label>
+         <Label prefHeight="27.0" prefWidth="58.0" text="NAME" textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+         <Label prefHeight="18.0" prefWidth="90.0" text="TOTAL EP" textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <opaqueInsets>
+               <Insets bottom="15.0" top="15.0" />
+            </opaqueInsets>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+         <Label prefHeight="16.0" prefWidth="91.0" text="ATUAL EP" textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Label>
+         <Label prefHeight="6.0" prefWidth="100.0" text="LAST VIEW" textAlignment="JUSTIFY" textFill="WHITE">
+            <font>
+               <Font size="20.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="10.0" top="10.0" />
+            </VBox.margin>
+         </Label>
+      </children>
+   </VBox>
+</AnchorPane>
